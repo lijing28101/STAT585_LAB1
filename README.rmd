@@ -4,3 +4,6 @@
 - Li Jing
 - Zhang Zerui
 - Qiao Yang
+
+## Link
+https://github.com/lijing28101/STAT585_LAB1
