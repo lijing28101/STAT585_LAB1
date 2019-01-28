@@ -6,4 +6,4 @@
 - Qiao Yang
 
 ## Link
-https://github.com/lijing28101/STAT585_LAB1
+[https://github.com/lijing28101/STAT585_LAB1](https://github.com/lijing28101/STAT585_LAB1)
