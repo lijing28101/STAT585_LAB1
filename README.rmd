@@ -4,3 +4,32 @@
 - Li Jing
 - Zhang Zerui
 - Qiao Yang
+
+
+It said it has no package called "emo".
+
+I found the package homepage on GitHub: https://github.com/hadley/emo. It provides the installation method: `devtools::install_github("hadley/emo")`.
+
+'pseudo-class'
+
+```{r}
+library(dplyr)
+library(readr)
+library(ggplot2)
+library(stringr)
+
+ushcn <- read_fwf("ushcn-v2.5-stations.txt", fwf_cols(ID = c(1, 11), LATITUDE = c(13, 20), LONGITUDE = c(22, 30), ELEVATION = c(32, 37), STATE = c(39, 40), NAME = c(42, 71), COMPONENT1 = c(73, 78), COMPONENT2 = c(80, 85), COMPONENT3 = c(87, 92), UTC = c(94, 95)), col_types = cols(UTC = "c"))
+# read_fwf("ushcn-v2.5-stations.txt", fwf_cols(ID = 12, LATITUDE = 9, LONGITUDE = 10, ELEVATION = 7, STATE = 3, NAME = 31, COMPONENT1 = 7, COMPONENT2 = 7, COMPONENT3 = 7, UTC = 2))
+
+ushcn
+
+# ggplot(ushcn, aes())
+
+
+raw <- untar("ushcn.tavg.latest.raw.tar.gz", list = T)
+length(raw)
+ID <- ushcn %>%
+  filter(str_detect(NAME, fixed("fort dodge", ignore_case = T)), str_detect(STATE, "IA")) %>%
+  .$ID %>% .[1]
+str_detect(raw, ID) %>% raw[.]
+```
