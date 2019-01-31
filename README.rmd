@@ -33,3 +33,7 @@ ID <- ushcn %>%
   .$ID %>% .[1]
 str_detect(raw, ID) %>% raw[.]
 ```
+=======
+## Link
+[https://github.com/lijing28101/STAT585_LAB1](https://github.com/lijing28101/STAT585_LAB1)
+>>>>>>> a4082a4fd6525e094fe4566ca42d0892c0650d93
