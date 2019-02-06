@@ -17,7 +17,7 @@ output:
 - Qiao Yang
 
 
-##Buid a book
+## Buid a book
 
 It said it has no package called "emo".
 
@@ -26,7 +26,7 @@ I found the package homepage on GitHub: https://github.com/hadley/emo. It provid
 'pseudo-class'
 
 
-##Weather station
+## Weather station
 
 
 ```r
@@ -58,7 +58,7 @@ ushcn2 %>%
 ![](README_files/figure-html/unnamed-chunk-1-1.png)<!-- -->
 
   
-##More weather data
+## More weather data
 
 ```r
 raw <- untar("ushcn.tavg.latest.raw.tar.gz", list = T)
