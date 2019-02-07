@@ -1,7 +1,6 @@
 ---
 title: "README"
 author: "Team 8"
-date: "2/6/2019"
 output: 
       html_document:
         keep_md: True
@@ -25,7 +24,7 @@ The bigget problem we met: `Error in library(emo): there is no package called 'e
 
 
 ## Weather stations
-```{r}
+```{r, message=F, results='asis'}
 library(dplyr)
 library(readr)
 library(ggplot2)
@@ -43,7 +42,7 @@ ggplot() +
 ### More weather data
 raw <- untar("ushcn.tavg.latest.raw.tar.gz", list = T)
 
-cat("There are", length(raw), "of files in the tar.gz file, including 1 folder and", length(raw) - 1, "files in this folder.")
+cat("There are", length(raw), "files in the tar.gz file, including 1 folder and", length(raw) - 1, "files in this folder.")
 
 ID <- ushcn %>%
   filter(str_detect(NAME, fixed("fort dodge", ignore_case = T)), str_detect(STATE, "IA")) %>%
