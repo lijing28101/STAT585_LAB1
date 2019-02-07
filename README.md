@@ -9,6 +9,9 @@ output:
 
 # STAT585_LAB1
 
+## Link
+[https://github.com/lijing28101/STAT585_LAB1](https://github.com/lijing28101/STAT585_LAB1)
+
 ## Team Members
 - Li Jing
 - Zhang Zerui
@@ -64,6 +67,3 @@ str_detect(raw, ID) %>%
 ```
 
 The file of Fort Dodge, IA is 'USH00132999.raw.tavg'.
-
-## Link
-[https://github.com/lijing28101/STAT585_LAB1](https://github.com/lijing28101/STAT585_LAB1)
