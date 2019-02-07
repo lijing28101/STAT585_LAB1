@@ -227,8 +227,8 @@ ggplot() +
 <pre class="r"><code>### More weather data
 raw &lt;- untar(&quot;ushcn.tavg.latest.raw.tar.gz&quot;, list = T)
 
-cat(&quot;There are&quot;, length(raw), &quot;of files in the tar.gz file, including 1 folder and&quot;, length(raw) - 1, &quot;files in this folder.&quot;)</code></pre>
-<p>There are 1219 of files in the tar.gz file, including 1 folder and 1218 files in this folder.</p>
+cat(&quot;There are&quot;, length(raw), &quot;files in the tar.gz file, including 1 folder and&quot;, length(raw) - 1, &quot;files in this folder.&quot;)</code></pre>
+<p>There are 1219 files in the tar.gz file, including 1 folder and 1218 files in this folder.</p>
 <pre class="r"><code>ID &lt;- ushcn %&gt;%
   filter(str_detect(NAME, fixed(&quot;fort dodge&quot;, ignore_case = T)), str_detect(STATE, &quot;IA&quot;)) %&gt;%
   .$ID %&gt;% .[1]

@@ -47,10 +47,10 @@ ggplot() +
 ### More weather data
 raw <- untar("ushcn.tavg.latest.raw.tar.gz", list = T)
 
-cat("There are", length(raw), "of files in the tar.gz file, including 1 folder and", length(raw) - 1, "files in this folder.")
+cat("There are", length(raw), "files in the tar.gz file, including 1 folder and", length(raw) - 1, "files in this folder.")
 ```
 
-There are 1219 of files in the tar.gz file, including 1 folder and 1218 files in this folder.
+There are 1219 files in the tar.gz file, including 1 folder and 1218 files in this folder.
 
 ```r
 ID <- ushcn %>%
