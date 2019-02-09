@@ -1,13 +1,10 @@
 ---
-title: "README"
+title: "STAT585_LAB1"
 author: "Team 8"
-output: 
-      html_document:
-        keep_md: True
+output:
+  html_document:
+    keep_md: True
 ---
-
-
-# STAT585_LAB1
 
 ## Link
 [https://github.com/lijing28101/STAT585_LAB1](https://github.com/lijing28101/STAT585_LAB1)
@@ -21,10 +18,6 @@ output:
 The last word in Chapter 15 is 'pseudo-class'.
 
 The bigget problem we met: `Error in library(emo): there is no package called 'emo'`. We found the package homepage on GitHub: https://github.com/hadley/emo. It provides the installation method: `devtools::install_github("hadley/emo")`.
-
-# TO BE CONTINUED!
-
-
 
 ## Weather stations
 
