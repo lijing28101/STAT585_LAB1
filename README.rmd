@@ -27,7 +27,7 @@ library(ggplot2)
 library(stringr)
 
 ### US weather stations
-ushcn <- read_fwf("ushcn-v2.5-stations.txt", fwf_cols(ID = c(1, 11), LATITUDE = c(13, 20), LONGITUDE = c(22, 30), ELEVATION = c(32, 37), STATE = c(39, 40), NAME = c(42, 71), COMPONENT1 = c(73, 78), COMPONENT2 = c(80, 85), COMPONENT3 = c(87, 92), UTC = c(94, 95)), col_types = cols(UTC = "c"))
+ushcn <- read_fwf("ftp://ftp.ncdc.noaa.gov/pub/data/ushcn/v2.5/ushcn-v2.5-stations.txt", fwf_cols(ID = c(1, 11), LATITUDE = c(13, 20), LONGITUDE = c(22, 30), ELEVATION = c(32, 37), STATE = c(39, 40), NAME = c(42, 71), COMPONENT1 = c(73, 78), COMPONENT2 = c(80, 85), COMPONENT3 = c(87, 92), UTC = c(94, 95)), col_types = cols(UTC = "c"))
 
 ggplot() +
   geom_polygon(aes(x = long, y = lat, group = group), map_data("state"), colour = "black", fill = "white" ) +
@@ -36,6 +36,7 @@ ggplot() +
   theme_bw()
 
 ### More weather data
+download.file("ftp://ftp.ncdc.noaa.gov/pub/data/ushcn/v2.5/ushcn.tavg.latest.raw.tar.gz", "ushcn.tavg.latest.raw.tar.gz")
 raw <- untar("ushcn.tavg.latest.raw.tar.gz", list = T)
 
 cat("There are", length(raw), "files in the tar.gz file, including 1 folder and", length(raw) - 1, "files in this folder.")
